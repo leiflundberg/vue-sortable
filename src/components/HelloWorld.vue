@@ -10,9 +10,11 @@
         </div>
       </transition-group>
     </draggable>
-    
+
     <p><strong>Siste indexposisjon: </strong>{{ oldIndex }}</p>
-    <p><strong>Ny indexposisjon: </strong>{{ newIndex }}</p>
+    <p><strong>Ny indexposisjon: </strong>{{ newIndex }}</p><br>
+    <h4>Sensor i indexposisjon 0: </h4>
+    <p>{{ myArray[0].name }}</p>
   </div>
 </template>
 
