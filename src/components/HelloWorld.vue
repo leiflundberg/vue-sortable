@@ -11,8 +11,8 @@
       </transition-group>
     </draggable>
 
-    <p><strong>Siste indexposisjon: </strong>{{ oldIndex }}</p>
-    <p><strong>Ny indexposisjon: </strong>{{ newIndex }}</p><br>
+    <p><strong>Siste indexposisjon: </strong> {{ oldIndex }}</p>
+    <p><strong>Ny indexposisjon: </strong> {{ newIndex }}</p><br>
     <h4>Sensor i indexposisjon 0: </h4>
     <p>{{ myArray[0].name }}</p>
   </div>
@@ -39,16 +39,23 @@ export default {
         { name: "Bikube", id:4 },
         { name: "Bygg", id:5 },
       ],
+      index: '',
       oldIndex: '',
       newIndex: ''
     }
   },
   methods: {
+    showIndex() {
+      console.log('works');
+    },
     onEnd: function(evt) {
       console.log(evt)
       this.oldIndex = evt.oldIndex;
       this.newIndex = evt.newIndex;
     }
+  },
+  beforeMount(){
+    this.showIndex();
   }
 }
 </script>
