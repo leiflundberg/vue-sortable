@@ -5,12 +5,12 @@
     <draggable v-model="myArray" ghost-class="ghost" @end="onEnd">
       <transition-group type="transition" name="flip-list">
         <div class="sortable" :id="element.id" v-for="element in myArray" :key="element.id">
-          <h3>{{ element.name }}</h3><br>
-          <span>ID: {{ element.id }}</span>
+          <h3>{{ element.name }}</h3>
+          <span id="span">{{ element.id }}</span>
         </div>
       </transition-group>
     </draggable>
-
+    
     <p><strong>Siste indexposisjon: </strong>{{ oldIndex }}</p>
     <p><strong>Ny indexposisjon: </strong>{{ newIndex }}</p>
   </div>
@@ -68,6 +68,10 @@ strong {
   padding: 1em;
   cursor: move; 
   margin-bottom: 10px;
+}
+
+#span {
+    float: right; 
 }
 
 ul {
